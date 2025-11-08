@@ -2,7 +2,7 @@
 
 Full-stack e-commerce shopping cart backend built with Node.js, Express, and MongoDB Atlas.
 
-## 🚀 Features
+## Features
 
 - RESTful API for e-commerce cart operations
 - MongoDB Atlas integration for data persistence
@@ -12,13 +12,13 @@ Full-stack e-commerce shopping cart backend built with Node.js, Express, and Mon
 - Error handling and validation
 - CORS enabled for frontend integration
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js (v14 or higher)
 - MongoDB Atlas account
 - npm or yarn
 
-## 🛠️ Installation
+## Installation
 
 ### 1. Clone the repository
 
@@ -46,7 +46,7 @@ npm install
 Create a `.env` file in the root directory:
 
 ```env
-PORT=5000
+PORT=5050
 NODE_ENV=development
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/ecommerce?retryWrites=true&w=majority
 ```
@@ -69,7 +69,7 @@ npm start
 
 The server will start on `http://localhost:5000`
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Products
 
@@ -94,7 +94,7 @@ The server will start on `http://localhost:5000`
 | ------ | --------------- | ------------------------------------- |
 | POST   | `/api/checkout` | Process checkout and generate receipt |
 
-## 🧪 Testing the API
+## Testing the API
 
 ### Using cURL
 
@@ -145,7 +145,7 @@ curl -X POST http://localhost:5000/api/checkout \
   -d '{"name": "John Doe", "email": "john.doe@example.com"}'
 ```
 
-## 📦 Request/Response Examples
+## Request/Response Examples
 
 ### Add to Cart
 
@@ -231,7 +231,7 @@ Body: {
 }
 ```
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 ecommerce-cart-backend/
@@ -260,7 +260,7 @@ ecommerce-cart-backend/
 └── curl-examples.sh             # cURL test script
 ```
 
-## 🔧 Technologies Used
+## Technologies Used
 
 - **Node.js** - JavaScript runtime
 - **Express.js** - Web framework
@@ -269,20 +269,20 @@ ecommerce-cart-backend/
 - **CORS** - Cross-origin resource sharing
 - **dotenv** - Environment configuration
 
-## 🎯 Assignment Requirements Checklist
+## Assignment Requirements Checklist
 
-- ✅ Backend APIs (Node.js/Express)
-- ✅ GET /api/products - Returns 5-10 mock items
-- ✅ POST /api/cart - Add product with quantity
-- ✅ DELETE /api/cart/:id - Remove item
-- ✅ GET /api/cart - Get cart + total
-- ✅ POST /api/checkout - Generate mock receipt
-- ✅ MongoDB/Atlas integration
-- ✅ REST APIs
-- ✅ Error handling
-- ✅ Session management (session-id header)
+- Backend APIs (Node.js/Express)
+- GET /api/products - Returns 5-10 mock items
+- POST /api/cart - Add product with quantity
+- DELETE /api/cart/:id - Remove item
+- GET /api/cart - Get cart + total
+- POST /api/checkout - Generate mock receipt
+- MongoDB/Atlas integration
+- REST APIs
+- Error handling
+- Session management (session-id header)
 
-## 📝 Notes
+## Notes
 
 - The API uses session-id header for cart management (no authentication required for this mock)
 - Products are auto-seeded when first accessed
@@ -290,7 +290,7 @@ ecommerce-cart-backend/
 - Checkout clears the cart and generates a mock receipt
 - Tax is calculated as 8% of subtotal
 
-## 🚀 Deployment
+## Deployment
 
 For deployment to platforms like Heroku, Railway, or Render:
 
@@ -298,10 +298,10 @@ For deployment to platforms like Heroku, Railway, or Render:
 2. Set environment variables on the platform
 3. Use the start script: `npm start`
 
-## 📧 Support
+## Support
 
 For questions or issues, please contact via the project repository.
 
-## 📄 License
+## License
 
 ISC
