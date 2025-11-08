@@ -1,0 +1,672 @@
+{
+	"info": {
+		"_postman_id": "6b424fdd-695a-4aa8-a1e5-083c85e1eeea",
+		"name": "E-Commerce Cart API",
+		"description": "Backend API for e-commerce shopping cart with MongoDB Atlas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28831561"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						},
+						"description": "Get all products (5-10 mock items)"
+					},
+					"response": [
+						{
+							"name": "Get All Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1751"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6d7-iW34vh8aupxSr3ffPAuLJ7oZR/o\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Nov 2025 04:14:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"prod_1\",\n        \"name\": \"Wireless Headphones\",\n        \"price\": 79.99,\n        \"description\": \"Premium headphones\",\n        \"image\": \"\",\n        \"category\": \"general\",\n        \"inStock\": true,\n        \"_id\": \"690ec3c2872042b290c19dce\",\n        \"__v\": 0,\n        \"createdAt\": \"2025-11-08T04:14:58.831Z\",\n        \"updatedAt\": \"2025-11-08T04:14:58.831Z\"\n    },\n    {\n        \"id\": \"prod_2\",\n        \"name\": \"Smart Watch\",\n        \"price\": 199.99,\n        \"description\": \"Fitness tracker\",\n        \"image\": \"\",\n        \"category\": \"general\",\n        \"inStock\": true,\n        \"_id\": \"690ec3c2872042b290c19dcf\",\n        \"__v\": 0,\n        \"createdAt\": \"2025-11-08T04:14:58.831Z\",\n        \"updatedAt\": \"2025-11-08T04:14:58.831Z\"\n    },\n    {\n        \"id\": \"prod_3\",\n        \"name\": \"Laptop Stand\",\n        \"price\": 49.99,\n        \"description\": \"Adjustable stand\",\n        \"image\": \"\",\n        \"category\": \"general\",\n        \"inStock\": true,\n        \"_id\": \"690ec3c2872042b290c19dd0\",\n        \"__v\": 0,\n        \"createdAt\": \"2025-11-08T04:14:58.831Z\",\n        \"updatedAt\": \"2025-11-08T04:14:58.831Z\"\n    },\n    {\n        \"id\": \"prod_4\",\n        \"name\": \"Mechanical Keyboard\",\n        \"price\": 129.99,\n        \"description\": \"RGB keyboard\",\n        \"image\": \"\",\n        \"category\": \"general\",\n        \"inStock\": true,\n        \"_id\": \"690ec3c2872042b290c19dd1\",\n        \"__v\": 0,\n        \"createdAt\": \"2025-11-08T04:14:58.831Z\",\n        \"updatedAt\": \"2025-11-08T04:14:58.831Z\"\n    },\n    {\n        \"id\": \"prod_5\",\n        \"name\": \"Wireless Mouse\",\n        \"price\": 39.99,\n        \"description\": \"Ergonomic mouse\",\n        \"image\": \"\",\n        \"category\": \"general\",\n        \"inStock\": true,\n        \"_id\": \"690ec3c2872042b290c19dd2\",\n        \"__v\": 0,\n        \"createdAt\": \"2025-11-08T04:14:58.831Z\",\n        \"updatedAt\": \"2025-11-08T04:14:58.831Z\"\n    },\n    {\n        \"id\": \"prod_6\",\n        \"name\": \"USB-C Hub\",\n        \"price\": 59.99,\n        \"description\": \"7-in-1 hub\",\n        \"image\": \"\",\n        \"category\": \"general\",\n        \"inStock\": true,\n        \"_id\": \"690ec3c2872042b290c19dd3\",\n        \"__v\": 0,\n        \"createdAt\": \"2025-11-08T04:14:58.831Z\",\n        \"updatedAt\": \"2025-11-08T04:14:58.831Z\"\n    },\n    {\n        \"id\": \"prod_7\",\n        \"name\": \"Desk Lamp\",\n        \"price\": 34.99,\n        \"description\": \"LED lamp\",\n        \"image\": \"\",\n        \"category\": \"general\",\n        \"inStock\": true,\n        \"_id\": \"690ec3c2872042b290c19dd4\",\n        \"__v\": 0,\n        \"createdAt\": \"2025-11-08T04:14:58.832Z\",\n        \"updatedAt\": \"2025-11-08T04:14:58.832Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Product by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/prod_1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"prod_1"
+							]
+						},
+						"description": "Get single product by ID"
+					},
+					"response": [
+						{
+							"name": "Get Product by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products/690ec3c2872042b290c19dce",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										"690ec3c2872042b290c19dce"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "259"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"103-QXDdVNV0f67BZh1VFSvAMVBR5DU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Nov 2025 04:17:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"690ec3c2872042b290c19dce\",\n    \"id\": \"prod_1\",\n    \"name\": \"Wireless Headphones\",\n    \"price\": 79.99,\n    \"description\": \"Premium headphones\",\n    \"image\": \"\",\n    \"category\": \"general\",\n    \"inStock\": true,\n    \"__v\": 0,\n    \"createdAt\": \"2025-11-08T04:14:58.831Z\",\n    \"updatedAt\": \"2025-11-08T04:14:58.831Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Get Cart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "session-id",
+								"value": "{{sessionId}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/cart",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cart"
+							]
+						},
+						"description": "Get cart with items and total"
+					},
+					"response": [
+						{
+							"name": "Get Cart",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "session-id",
+										"value": "{{sessionId}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cart",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8b-ASxJ4Wsc6naWL3MHLj9a+6YlJDk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Nov 2025 04:18:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"items\": [\n        {\n            \"productId\": \"690ec3c2872042b290c19dce\",\n            \"name\": \"Wireless Headphones\",\n            \"price\": 79.99,\n            \"quantity\": 2\n        }\n    ],\n    \"total\": \"159.98\",\n    \"itemCount\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Add to Cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "session-id",
+								"value": "{{sessionId}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productId\": \"prod_1\",\n  \"qty\": 2\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cart",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cart"
+							]
+						},
+						"description": "Add item to cart"
+					},
+					"response": [
+						{
+							"name": "Add to Cart",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "session-id",
+										"value": "{{sessionId}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"productId\": \"690ec3c2872042b290c19dce\",\n  \"qty\": 2\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cart",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "197"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c5-ERV4n7SvqXEH/F5H0sOL6M8T904\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Nov 2025 04:17:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Product added to cart\",\n    \"data\": {\n        \"items\": [\n            {\n                \"productId\": \"690ec3c2872042b290c19dce\",\n                \"name\": \"Wireless Headphones\",\n                \"price\": 79.99,\n                \"quantity\": 2\n            }\n        ],\n        \"total\": \"159.98\",\n        \"itemCount\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Cart Item",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "session-id",
+								"value": "{{sessionId}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"qty\": 3\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cart/prod_1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cart",
+								"prod_1"
+							]
+						},
+						"description": "Update cart item quantity"
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Cart Item",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "session-id",
+								"value": "{{sessionId}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/cart/prod_1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cart",
+								"prod_1"
+							]
+						},
+						"description": "Remove item from cart"
+					},
+					"response": [
+						{
+							"name": "Remove Cart Item",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "session-id",
+										"value": "{{sessionId}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cart/690ec3c2872042b290c19dce",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cart",
+										"690ec3c2872042b290c19dce"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "100"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"64-Ms0I79XyQzDvAAzfp4B5dUJqkck\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Nov 2025 04:19:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Item removed from cart\",\n    \"data\": {\n        \"items\": [],\n        \"total\": \"0.00\",\n        \"itemCount\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Clear Cart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "session-id",
+								"value": "{{sessionId}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/cart",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cart"
+							]
+						},
+						"description": "Clear entire cart"
+					},
+					"response": [
+						{
+							"name": "Clear Cart",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "session-id",
+										"value": "{{sessionId}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cart",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"55-76JRGj+SMTAV/PAwZ5F4wrsBon8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Nov 2025 04:19:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Cart cleared\",\n    \"data\": {\n        \"items\": [],\n        \"total\": 0,\n        \"itemCount\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Checkout",
+			"item": [
+				{
+					"name": "Process Checkout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "session-id",
+								"value": "{{sessionId}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/checkout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"checkout"
+							]
+						},
+						"description": "Process checkout and generate receipt"
+					},
+					"response": [
+						{
+							"name": "Process Checkout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "session-id",
+										"value": "{{sessionId}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/checkout",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"checkout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "430"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ae-9qCZmpDv+z8lLZX7gHAsgVZHtjs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Nov 2025 04:20:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Checkout successful\",\n    \"data\": {\n        \"receiptId\": \"RCP-1762575600698-yn5ur858n\",\n        \"customer\": {\n            \"name\": \"John Doe\",\n            \"email\": \"john.doe@example.com\"\n        },\n        \"items\": [\n            {\n                \"productId\": \"690ec3c2872042b290c19dce\",\n                \"name\": \"Wireless Headphones\",\n                \"price\": 79.99,\n                \"quantity\": 2,\n                \"subtotal\": \"159.98\"\n            }\n        ],\n        \"subtotal\": \"159.98\",\n        \"tax\": \"12.80\",\n        \"total\": \"172.78\",\n        \"timestamp\": \"2025-11-08T04:20:00.698Z\",\n        \"paymentMethod\": \"Mock Payment\",\n        \"status\": \"Completed\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:5000/api"
+		},
+		{
+			"key": "sessionId",
+			"value": "user_12345"
+		}
+	]
+}
